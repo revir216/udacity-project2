@@ -48,7 +48,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util.js';
        result = await filterImageFromURL(url)
     } catch (err) {
       console.log('ERROR: ', err)
-      res.status(404).send('error uploading image')
+      res.status(500).send('error uploading image')
       return;
     }
     if (result) {
